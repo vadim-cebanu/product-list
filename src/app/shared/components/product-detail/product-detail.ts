@@ -13,14 +13,17 @@ export class ProductDetail {
   ngOnInit(){
     let currentName = this.route.snapshot.paramMap.get('name');
     if(currentName) this.detail.name = currentName;
+
+     let currentSpecs = this.route.snapshot.paramMap.get('specs');
+    if(currentSpecs) this.detail.specs = currentSpecs;
   }
 
   detail = {
-    "name": "Gaming Maus",
+    "name": "detail.name",
     "description": "Eine ergonomische Gaming-Maus mit hoher Präzision und einstellbarer DPI.Ideal für FPS- und MOBA - Spiele, bietet sie eine langlebige Bauweise und komfortable Seitentasten für schnelles Reagieren.",
-    "specs": "dpi: 6400, cable length: 1.8m, color: Schwarz",
+    "specs": "asdakjv asjdblasid",
     "stock": 120,
-    "price": 2500000
+    "price": 25000
   }
 
   deleteDetail() {
