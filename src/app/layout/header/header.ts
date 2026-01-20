@@ -1,6 +1,5 @@
 import { Component, inject } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
-import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
@@ -16,7 +15,6 @@ export class Header {
     this.updateButtonState(this.router.url);
     
     this.router.events.pipe(
-      filter(event => event instanceof NavigationEnd)
     ).subscribe((event: any) => {
       this.updateButtonState(event.url);
     });
